@@ -21,8 +21,14 @@ body {
   color: var(--font-color);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -36,7 +42,8 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/*header*/
+
+/*Header*/
 
 .header-border {
   border-bottom: solid 1px var(--header-border);
@@ -82,9 +89,12 @@ a:active {
 
 .link-item {
   display: block;
-  margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.link-item + .link-item {
+  margin-left: 50px;
 }
 
 .nav-link {
@@ -106,15 +116,19 @@ a:active {
 
 .contact {
   display: block;
-  margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--grey);
 }
 
+.contact + .contact {
+  margin-left: 50px;
+}
+
 .top-bar {
   background-color: var(--dark-bg);
+  padding: 200px 0;
 }
 
 .banner {
@@ -125,7 +139,6 @@ a:active {
 
 .title {
   margin: 0;
-  margin-top: 200px;
   text-align: center;
   text-transform: uppercase;
   font-size: 44px;
@@ -135,9 +148,8 @@ a:active {
 }
 
 .primary-button {
-  margin: auto;
+  margin: 0 auto;
   margin-top: var(--default-gap);
-  margin-bottom: 200px;
   padding: 15px 32px 15px 32px;
   background-color: var(--blue);
   font-family: inherit;
@@ -165,7 +177,7 @@ a:active {
 
 .features-element {
   text-align: left;
-  flex-basis: calc(100% / 4 - 50px);
+  flex-basis: calc(100% / 4 - 35px);
 }
 
 .feature-title {
@@ -198,8 +210,6 @@ a:active {
   text-align: center;
   font-size: 36px;
   font-weight: 700;
-  padding: 0;
-  margin: 0;
   margin-bottom: 50px;
 }
 
@@ -223,12 +233,9 @@ a:active {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
 }
 
 .team-title {
-  margin: 0;
   margin-bottom: 50px;
   text-align: center;
   font-size: 36px;
@@ -266,11 +273,10 @@ a:active {
   color: var(--white);
   display: flex;
   flex-direction: column;
+  padding: 60px 0;
 }
 
 .footer-logo {
-  margin-top: 60px;
-  float: left;
   color: var(--white);
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -286,7 +292,6 @@ a:active {
   font-style: normal;
   font-family: inherit;
   margin-top: 20px;
-  margin-bottom: 60px;
 }
 
 .foter-contact-list {
@@ -310,23 +315,20 @@ a:active {
 /* Portfolio */
 
 .portfolio-buttons {
-  list-style-type: none;
-  display: inline;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-button-item {
-  display: inline;
-  margin-right: 8px;
+.portfolio-button-item + .portfolio-button-item {
+  margin-left: 8px;
 }
 
 .secondary-button {
   display: inline;
   border-radius: 4px;
   border: none;
-  padding: 10px 22px;
+  padding: 14px 23px;
   background-color: var(--light-bg);
   font-family: inherit;
   font-weight: 500px;
@@ -337,6 +339,8 @@ a:active {
   color: var(--white);
   background-color: var(--blue);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-button:hover {
@@ -349,8 +353,6 @@ a:active {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .projects-card {
@@ -371,8 +373,6 @@ a:active {
 .projects-item-title {
   font-size: 18px;
   font-weight: 700;
-  margin: 0;
-  padding: 0;
   margin-left: 25px;
   margin-bottom: 25px;
 }
