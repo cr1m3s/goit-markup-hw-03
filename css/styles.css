@@ -352,12 +352,13 @@ a:active {
 .projects-list {
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .projects-card {
-  flex-basis: calc(100% / 3 - var(--default-gap));
-  margin-right: var(--default-gap);
+  flex-basis: calc((100% - 2 * var(--default-gap)) / 3);
+  margin: 0;
   margin-bottom: var(--default-gap);
   display: flex;
   flex-direction: column;
