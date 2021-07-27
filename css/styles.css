@@ -387,7 +387,3 @@ a:active {
   padding-left: 24px;
   margin-bottom: var(--default-gap);
 }
-
-.last {
-  margin-right: 0px;
-}
