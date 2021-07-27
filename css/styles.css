@@ -328,7 +328,7 @@ a:active {
   display: inline;
   border-radius: 4px;
   border: none;
-  padding: 14px 23px;
+  padding: 10px 23px;
   background-color: var(--light-bg);
   font-family: inherit;
   font-weight: 500px;
