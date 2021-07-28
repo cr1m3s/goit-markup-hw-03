@@ -11,6 +11,16 @@
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --header-border: #ececec;
   --default-gap: 30px;
+  --section-padding: 94px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
 }
 
 body {
@@ -31,8 +41,7 @@ ul {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .section {
@@ -53,7 +62,8 @@ ul {
   display: flex;
 }
 
-.logo {
+.logo,
+.footer-logo {
   padding-top: 24px;
   padding-bottom: 24px;
   margin-right: 93px;
@@ -93,28 +103,31 @@ a:active {
   padding-bottom: 32px;
 }
 
-.link-item + .link-item {
-  margin-left: 50px;
+.link-item:not(:last-child) {
+  margin-right: 50px;
 }
 
-.nav-link {
+.nav-link,
+.contact-link {
   font-size: 14px;
   font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.contact-link:hover {
+  color: var(--blue);
+}
+
+.current {
   color: var(--blue);
 }
 
 .contact-us {
   display: flex;
   margin-left: auto;
-  padding: 0;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
-.contact {
+.contact-item {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -122,8 +135,8 @@ a:active {
   color: var(--grey);
 }
 
-.contact + .contact {
-  margin-left: 50px;
+.contact-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .top-bar {
@@ -138,7 +151,6 @@ a:active {
 }
 
 .title {
-  margin: 0;
   text-align: center;
   text-transform: uppercase;
   font-size: 44px;
@@ -150,7 +162,8 @@ a:active {
 .primary-button {
   margin: 0 auto;
   margin-top: var(--default-gap);
-  padding: 15px 32px 15px 32px;
+  padding: 15px 32px;
+
   background-color: var(--blue);
   font-family: inherit;
   font-size: 16px;
@@ -158,10 +171,11 @@ a:active {
   border: none;
   border-radius: 4px;
   color: var(--white);
+  cursor: pointer;
 }
 
 .primary-button:hover {
-  cursor: pointer;
+  opacity: 0.9;
 }
 
 /* Main part*/
@@ -184,11 +198,9 @@ a:active {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0;
 }
 
 .feature-description {
-  margin: 0;
   margin-top: 10px;
   color: var(--grey);
   font-size: 14px;
@@ -202,7 +214,6 @@ a:active {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 8px;
   padding-bottom: 67px;
 }
 
@@ -211,10 +222,6 @@ a:active {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 50px;
-}
-
-.service-element {
-  flex-basis: calc(100% / 3 - var(--default-gap));
 }
 
 /* Team */
@@ -253,7 +260,6 @@ a:active {
   font-size: 16px;
   font-weight: 500;
   margin-top: var(--default-gap);
-  margin-bottom: 0px;
 }
 
 .teammate-position {
@@ -277,27 +283,14 @@ a:active {
 }
 
 .footer-logo {
-  color: var(--white);
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.blue-text {
-  color: var(--blue);
+  margin: 0;
+  padding: 0;
 }
 
 .footer-contacts {
   font-style: normal;
   font-family: inherit;
   margin-top: 20px;
-}
-
-.foter-contact-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 .footer-address-item {
@@ -312,6 +305,14 @@ a:active {
   font-size: 14px;
 }
 
+.footer-address-item:hover {
+  color: var(--blue);
+}
+
+.footer-contact-item:hover {
+  color: var(--blue);
+}
+
 /* Portfolio */
 
 .portfolio-buttons {
@@ -320,8 +321,8 @@ a:active {
   margin-bottom: 50px;
 }
 
-.portfolio-button-item + .portfolio-button-item {
-  margin-left: 8px;
+.portfolio-button-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .secondary-button {
@@ -352,16 +353,22 @@ a:active {
 .projects-list {
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .projects-card {
-  flex-basis: calc((100% - 2 * var(--default-gap)) / 3);
   margin: 0;
-  margin-bottom: var(--default-gap);
+  margin-top: var(--default-gap);
   display: flex;
   flex-direction: column;
+}
+
+.projects-card:not(:nth-child(3n)) {
+  margin-right: var(--default-gap);
+}
+
+.first-row-card {
+  margin-top: 0px;
 }
 
 .projects-card-info {
