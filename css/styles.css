@@ -56,18 +56,16 @@ ul {
 
 .header-border {
   border-bottom: solid 1px var(--header-border);
+  padding: 24px 0;
 }
 
 .top-header {
   display: flex;
+  align-items: center;
 }
 
 .logo,
 .footer-logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-right: 93px;
-
   color: var(--black);
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
@@ -77,6 +75,7 @@ ul {
 
 .main-info {
   display: flex;
+  margin-left: 93px;
 }
 
 a:link,
@@ -93,14 +92,10 @@ a:active {
 
 .links {
   display: flex;
-  margin: 0;
-  padding: 0;
 }
 
 .link-item {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .link-item:not(:last-child) {
@@ -128,10 +123,6 @@ a:active {
 }
 
 .contact-item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   color: var(--grey);
 }
 
@@ -282,11 +273,6 @@ a:active {
   padding: 60px 0;
 }
 
-.footer-logo {
-  margin: 0;
-  padding: 0;
-}
-
 .footer-contacts {
   font-style: normal;
   font-family: inherit;
@@ -356,41 +342,39 @@ a:active {
   flex-wrap: wrap;
 }
 
-.projects-card {
+.project-card {
   margin: 0;
   margin-top: var(--default-gap);
   display: flex;
   flex-direction: column;
 }
 
-.projects-card:not(:nth-child(3n)) {
+.project-card:not(:nth-child(3n)) {
   margin-right: var(--default-gap);
 }
 
-.first-row-card {
+.project-card:nth-child(-n + 3) {
   margin-top: 0px;
 }
 
-.projects-card-info {
-  padding-top: 30px;
+.project-card-info {
+  padding: 20px 24px;
   box-sizing: border-box;
   border: 1px solid var(--card-border);
   border-top: 0;
 }
 
-.projects-item-title {
+.project-item-title {
   font-size: 18px;
   font-weight: 700;
-  margin-left: 25px;
-  margin-bottom: 25px;
+  line-height: 2;
 }
 
-.projects-item-description {
+.project-item-description {
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.8;
   color: var(--grey);
   margin: 0;
   padding: 0;
-  padding-left: 24px;
-  margin-bottom: var(--default-gap);
 }
